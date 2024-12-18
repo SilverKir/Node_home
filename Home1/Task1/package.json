@@ -1,0 +1,19 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dateUtility.js",
+  "bin": {
+    "current": "./dateUtility.js",
+    "add": "current add",
+    "sub": "./dateUtility.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
