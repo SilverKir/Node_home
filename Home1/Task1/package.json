@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "dateUtility.js",
+  "type": "module",
   "bin": {
     "current": "./dateUtility.js",
-    "add": "current add",
-    "sub": "./dateUtility.js"
+    "add": "./dateAdd.js",
+    "sub": "./dateSub.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
