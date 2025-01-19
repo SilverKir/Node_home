@@ -10,17 +10,21 @@ const fs = require('fs')
 
 function logAnalizer(fileName) {
 
-    const result = fs.readFileSync(fileName, 'utf-8').split("\n")
-    result.pop();
-    const items = result.map(item => {
-        return JSON.parse(item).result
-    })
+    try {
+        const result = fs.readFileSync(fileName, 'utf-8').split("\n")
+        result.pop();
+        const items = result.map(item => {
+            return JSON.parse(item).result
+        })
 
-    return {
-        count: items.length,
-        win: items.filter(item => item === true).length,
-        loose: items.filter(item => item === false).length,
-        winPercent: (items.filter(item => item === true).length / items.length) * 100,
+        return {
+            count: items.length,
+            win: items.filter(item => item === true).length,
+            loose: items.filter(item => item === false).length,
+            winPercent: (items.filter(item => item === true).length / items.length) * 100,
+        }
+
+    } catch {
+        throw Error('Файл лога не найден')
     }
-
 }
