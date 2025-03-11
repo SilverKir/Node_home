@@ -1,1 +1,1 @@
-WeatherstackAPIKey="10740b9f0f6e8554577378c787352d7e"
+WeatherstackAPIKey="31f972b2decdc890602691623cb8691d"
