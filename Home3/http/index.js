@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-const http = require('http');
-let city = process.argv.slice(2).reduce((acc, arg) => acc+" "+arg, "").trim();
-const myAPIKey = process.env.WeatherstackAPIKey;
 
+const http = require('http');
+
+ const myAPIKey = require('./config.js').myAPIKey;
+
+let city = process.argv.slice(2).reduce((acc, arg) => acc+" "+arg, "").trim();
 
 if (!city||city.length<2) {
     const readline = require('node:readline');
