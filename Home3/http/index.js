@@ -9,7 +9,7 @@ if (!city||city.length<2) {
     const readline = require('node:readline');
     const { stdin: input, stdout: output } = require('node:process');
     const rl = readline.createInterface({ input, output });
-    const number = Math.floor(Math.random() * 101);
+
     
     rl.question('Введите название города  \n', (answer) => {
         inspectAnswer(answer);
@@ -17,7 +17,7 @@ if (!city||city.length<2) {
 
     function inspectAnswer(answer) {
         if (!answer|| answer.length<2 ) {
-            console.log('Некоореектные данные! Попробуйте еще раз!');
+            console.log('Некорректные данные! Попробуйте еще раз!');
             rl.question('', (answer) => {
                 inspectAnswer(answer)})
         } else {
